@@ -1,0 +1,452 @@
+_________________Todas las peliculas donde participa Robert Duvall ____________________
+
+{
+  id: 2,
+  title: 'The Godfather',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1972,
+  director: 'Francis Ford Coppola'
+}
+{
+  id: 3,
+  title: 'The Godfather Part II',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1974,
+  director: 'Francis Ford Coppola'
+}
+
+__________________Película con id:2 (1pto) ____________________
+
+{
+  id: 2,
+  title: 'The Godfather',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1972,
+  director: 'Francis Ford Coppola',
+  actors: [
+    'Marlon Brando',
+    'Al Pacino',
+    'James Caan',
+    'Richard S. Castellano',
+    'Robert Duvall',
+    'Sterling Hayden'
+  ]
+}
+
+__________________ Añade una nueva película (1pto) ____________________
+
+{
+  id: 1,
+  title: 'The Shawshank Redemption',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Morgan Freeman',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+{
+  id: 2,
+  title: 'The Godfather',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1972,
+  director: 'Francis Ford Coppola',
+  actors: [
+    'Marlon Brando',
+    'Al Pacino',
+    'James Caan',
+    'Richard S. Castellano',
+    'Robert Duvall',
+    'Sterling Hayden'
+  ]
+}
+{
+  id: 3,
+  title: 'The Godfather Part II',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1974,
+  director: 'Francis Ford Coppola',
+  actors: [
+    'Al Pacino',
+    'Robert Duvall',
+    'Diane Keaton',
+    'Robert De Niro',
+    'John Cazale',
+    'Talia Shire'
+  ]
+}
+{
+  id: 4,
+  title: 'The Dark Knight',
+  genres: [ 'Action', 'Crime', 'Drama', 'Thriller' ],
+  year: 2008,
+  director: 'Christopher Nolan',
+  actors: [
+    'Christian Bale',
+    'Heath Ledger',
+    'Aaron Eckhart',
+    'Michael Caine',
+    'Maggie Gyllenhaal',
+    'Gary Oldman'
+  ]
+}
+{
+  id: 5,
+  title: "Schindler's List",
+  genres: [ 'Biography', 'Drama', 'History' ],
+  year: 1994,
+  director: 'Steven Spielberg',
+  actors: [
+    'Liam Neeson',
+    'Ben Kingsley',
+    'Ralph Fiennes',
+    'Caroline Goodall',
+    'Jonathan Sagall',
+    'Embeth Davidtz'
+  ]
+}
+{
+  id: 10,
+  title: 'Dances with Wolves',
+  genres: [ 'Adventure', 'Western ', 'Drama' ],
+  year: 1990,
+  director: 'Kevin Costner',
+  actors: [
+    'Kevin Costner',
+    'Mary McDonnell',
+    'Graham Greene',
+    'Rodney A. Grant'
+  ]
+}
+
+__________________Modifica la película con id:3 (1pto) ____________________
+
+{
+  id: 1,
+  title: 'The Shawshank Redemption',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Morgan Freeman',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+{
+  id: 2,
+  title: 'The Godfather',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1972,
+  director: 'Francis Ford Coppola',
+  actors: [
+    'Marlon Brando',
+    'Al Pacino',
+    'James Caan',
+    'Richard S. Castellano',
+    'Robert Duvall',
+    'Sterling Hayden'
+  ]
+}
+{
+  id: 4,
+  title: 'The Dark Knight',
+  genres: [ 'Action', 'Crime', 'Drama', 'Thriller' ],
+  year: 2008,
+  director: 'Christopher Nolan',
+  actors: [
+    'Christian Bale',
+    'Heath Ledger',
+    'Aaron Eckhart',
+    'Michael Caine',
+    'Maggie Gyllenhaal',
+    'Gary Oldman'
+  ]
+}
+{
+  id: 5,
+  title: "Schindler's List",
+  genres: [ 'Biography', 'Drama', 'History' ],
+  year: 1994,
+  director: 'Steven Spielberg',
+  actors: [
+    'Liam Neeson',
+    'Ben Kingsley',
+    'Ralph Fiennes',
+    'Caroline Goodall',
+    'Jonathan Sagall',
+    'Embeth Davidtz'
+  ]
+}
+{
+  id: 10,
+  title: 'Dances with Wolves',
+  genres: [ 'Adventure', 'Western ', 'Drama' ],
+  year: 1990,
+  director: 'Kevin Costner',
+  actors: [
+    'Kevin Costner',
+    'Mary McDonnell',
+    'Graham Greene',
+    'Rodney A. Grant'
+  ]
+}
+{
+  id: 3,
+  title: 'El padrino parte II',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Ricard el profe',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+
+__________________Devuelve todas las peliculas (1pto)____________________
+
+{
+  id: 1,
+  title: 'The Shawshank Redemption',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Morgan Freeman',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+{
+  id: 2,
+  title: 'The Godfather',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1972,
+  director: 'Francis Ford Coppola',
+  actors: [
+    'Marlon Brando',
+    'Al Pacino',
+    'James Caan',
+    'Richard S. Castellano',
+    'Robert Duvall',
+    'Sterling Hayden'
+  ]
+}
+{
+  id: 4,
+  title: 'The Dark Knight',
+  genres: [ 'Action', 'Crime', 'Drama', 'Thriller' ],
+  year: 2008,
+  director: 'Christopher Nolan',
+  actors: [
+    'Christian Bale',
+    'Heath Ledger',
+    'Aaron Eckhart',
+    'Michael Caine',
+    'Maggie Gyllenhaal',
+    'Gary Oldman'
+  ]
+}
+{
+  id: 5,
+  title: "Schindler's List",
+  genres: [ 'Biography', 'Drama', 'History' ],
+  year: 1994,
+  director: 'Steven Spielberg',
+  actors: [
+    'Liam Neeson',
+    'Ben Kingsley',
+    'Ralph Fiennes',
+    'Caroline Goodall',
+    'Jonathan Sagall',
+    'Embeth Davidtz'
+  ]
+}
+{
+  id: 10,
+  title: 'Dances with Wolves',
+  genres: [ 'Adventure', 'Western ', 'Drama' ],
+  year: 1990,
+  director: 'Kevin Costner',
+  actors: [
+    'Kevin Costner',
+    'Mary McDonnell',
+    'Graham Greene',
+    'Rodney A. Grant'
+  ]
+}
+{
+  id: 3,
+  title: 'El padrino parte II',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Ricard el profe',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+
+_________________Todas las peliculas del año 1994 (1pto) ____________________
+
+{
+  id: 1,
+  title: 'The Shawshank Redemption',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Morgan Freeman',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+{
+  id: 5,
+  title: "Schindler's List",
+  genres: [ 'Biography', 'Drama', 'History' ],
+  year: 1994,
+  director: 'Steven Spielberg',
+  actors: [
+    'Liam Neeson',
+    'Ben Kingsley',
+    'Ralph Fiennes',
+    'Caroline Goodall',
+    'Jonathan Sagall',
+    'Embeth Davidtz'
+  ]
+}
+{
+  id: 3,
+  title: 'El padrino parte II',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Ricard el profe',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+
+_________________Añadir un actor a la pelicula id:4 (1pto)____________________
+
+{
+  id: 4,
+  title: 'The Dark Knight',
+  genres: [ 'Action', 'Crime', 'Drama', 'Thriller' ],
+  year: 2008,
+  director: 'Christopher Nolan',
+  actors: [
+    'Christian Bale',
+    'Heath Ledger',
+    'Aaron Eckhart',
+    'Michael Caine',
+    'Maggie Gyllenhaal',
+    'Gary Oldman',
+    'Ricard el profe'
+  ]
+}
+
+__________________Eliminar la película con id:2 (1pto) ____________________
+
+{
+  id: 1,
+  title: 'The Shawshank Redemption',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Morgan Freeman',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+{
+  id: 4,
+  title: 'The Dark Knight',
+  genres: [ 'Action', 'Crime', 'Drama', 'Thriller' ],
+  year: 2008,
+  director: 'Christopher Nolan',
+  actors: [
+    'Christian Bale',
+    'Heath Ledger',
+    'Aaron Eckhart',
+    'Michael Caine',
+    'Maggie Gyllenhaal',
+    'Gary Oldman',
+    'Ricard el profe'
+  ]
+}
+{
+  id: 5,
+  title: "Schindler's List",
+  genres: [ 'Biography', 'Drama', 'History' ],
+  year: 1994,
+  director: 'Steven Spielberg',
+  actors: [
+    'Liam Neeson',
+    'Ben Kingsley',
+    'Ralph Fiennes',
+    'Caroline Goodall',
+    'Jonathan Sagall',
+    'Embeth Davidtz'
+  ]
+}
+{
+  id: 10,
+  title: 'Dances with Wolves',
+  genres: [ 'Adventure', 'Western ', 'Drama' ],
+  year: 1990,
+  director: 'Kevin Costner',
+  actors: [
+    'Kevin Costner',
+    'Mary McDonnell',
+    'Graham Greene',
+    'Rodney A. Grant'
+  ]
+}
+{
+  id: 3,
+  title: 'El padrino parte II',
+  genres: [ 'Crime', 'Drama' ],
+  year: 1994,
+  director: 'Frank Darabont',
+  actors: [
+    'Tim Robbins',
+    'Ricard el profe',
+    'Bob Gunton',
+    'William Sadler',
+    'Clancy Brown',
+    'Gil Bellows'
+  ]
+}
+Ups! movie no existe
