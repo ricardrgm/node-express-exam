@@ -1,6 +1,7 @@
 import HttpError from "http-errors";
 import userModel from '../models/usersModel.js'
 import bcrypt from 'bcrypt';
+import messageapp from '../data/messages.js';
 
 const register = (req, res, next) => {
     console.log(`---> userController::register`);
@@ -10,7 +11,7 @@ const register = (req, res, next) => {
         let result;
 
         if (!body.username || !body.password) {
-            next(HttpError(400, { message: 'Error en los parámetros de entrada' }))
+            next(HttpError(400, { message: messageapp.parameter_not_especified }))
         } else {
 
 
@@ -19,14 +20,14 @@ const register = (req, res, next) => {
 
             result = userModel.loginUser(user);
             if (result != undefined) {
-                next(HttpError(400, { message: 'UPS!! Usuario Existente' }));
+                next(HttpError(400, { message: messageapp.user_error_login }));
 
             } else {
 
                 result = userModel.createUser(user);
 
                 if (result < 0)
-                    next(HttpError(400, { message: 'No se pudo registrar' }))
+                    next(HttpError(400, { message: messageapp.user_error_register }))
 
                 res.status(201).json(result);
 
@@ -47,20 +48,20 @@ const login = (req, res, next) => {
         const body = req.body;
 
         if (!body.username || !body.password) {
-            next(HttpError(400, { message: 'Error en los parámetros de entrada' }))
+            next(HttpError(400, {  message: messageapp.parameter_not_especified }))
         } else {
 
             const user = { username: body.username, password: body.password, timestamp: (body.timestamp || 0) };
             const result = userModel.loginUser(user);
 
             if (result === undefined) {
-                next(HttpError(400, { message: 'Username or Password incorrect' }));
+                next(HttpError(400, { message: messageapp.user_error_login }));
             } else {
                 console.log(`---> userController::login ${result.password}`);
                 console.log(`---> userController::login ${body.password}`);
 
                 if (!bcrypt.compareSync(body.password, result.password))
-                    next(HttpError(400, { message: 'Username or Password incorrect' }));
+                    next(HttpError(400, { message: messageapp.user_error_login  }));
                 else
                     res.status(200).json(result);
             }

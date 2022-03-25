@@ -1,5 +1,6 @@
 import HttpError from "http-errors";
 import moviesModel from '../models/moviesModel.js';
+import messageapp from '../data/messages.js';
 
 const getAllMovies = (req, res) => {
 
@@ -14,7 +15,7 @@ const getMovieById = (req, res, next) => {
     console.log("---> moviesController::getMovieById");
 
     if (!req.params.id)
-        next(HttpError(400, { message: 'no parameter found' }));
+        next(HttpError(400, { message: messageapp.parameter_not_especified }));
     try {
 
         const id = req.params.id;
@@ -31,11 +32,11 @@ const removeMovie = (req, res, next) => {
     console.log("---> moviesController::removeMovie");
 
     if (!req.params.id)
-        next(HttpError(400, { message: 'no parameter found' }));
+        next(HttpError(400, { message: messageapp.parameter_not_especified }));
 
     const id = req.params.id;
     if (moviesModel.removeMovie(id) == -1) {
-        next(HttpError(400, { message: 'Ups! Movie no existe' }));
+        next(HttpError(400, { message: messageapp.movie_dosent_exist }));
 
     }
 
@@ -48,7 +49,7 @@ const createMovie = (req, res, next) => {
     console.log(`---> moviesController::createMovie`);
 
     if (!req.body)
-        next(HttpError(400, { message: 'Ups! parametro de entrada incorrecto' }));
+        next(HttpError(400, { message: messageapp.parameter_not_especified }));
 
     try {
 
@@ -67,7 +68,7 @@ const updateMovie = (req, res, next) => {
 
     try {
         if (!req.body)
-            next(HttpError(400, { message: 'Ups! parametro de entrada incorrecto' }));
+            next(HttpError(400, { message: messageapp.parameter_not_especified }));
 
         moviesModel.updateMovie(req.body);
         getAllMovies(req, res);
@@ -82,7 +83,7 @@ const getMovieBy = (req, res, next) => {
     console.log(`---> moviesController::getMovieBy`);
 
     if (!req.body)
-        next(HttpError(400, { message: 'Ups! parametro de entarada incorrecto' }));
+        next(HttpError(400, { message: messageapp.parameter_not_especified }));
 
     const movies = moviesModel.getMovieBy(req.body);
     res.json(movies);
@@ -92,7 +93,7 @@ const getMovieBy = (req, res, next) => {
 const addActors = (req, res, next) => {
     console.log(`---> moviesController::addActors`);
     if (!req.body)
-        next(HttpError(400, { message: 'no parameter found' }));
+        next(HttpError(400, { message: messageapp.parameter_not_especified }));
 
     const _movie = moviesModel.addActors(req.body);
     res.json(_movie);
@@ -104,7 +105,7 @@ const getMoviesFromActor = (req, res, next) => {
     console.log(`---> moviesController::getMoviesFromActor`);
 
     if (!req.body)
-        next(HttpError(400, { message: 'Ups! parametro de entarada incorrecgetMovieByto' }));
+        next(HttpError(400, { message: messageapp.parameter_not_especified }));
 
     const movies = moviesModel.getMoviesFromActor(req.body);
     res.json(movies);

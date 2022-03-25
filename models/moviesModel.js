@@ -2,6 +2,7 @@ import movie from './movies/movies.js';
 import actor from './actors/actors.js';
 import moviePojo from '../models/movies/moviePojo.js';
 import actorPojo from '../models/actors/actorPojo.js';
+import messageapp from '../data/messages.js';
 
 
 class MoviesModel {
@@ -25,7 +26,7 @@ class MoviesModel {
 
         const _movie = movie.getMovieById(id);
         if (typeof _movie == 'undefined')
-            throw new Error('Ups! movie no existe');
+            throw new Error(messageapp.movie_dosent_exist);
 
         _movie.actors = actor.getActorsById(_movie.id).actors;
         return _movie;
@@ -61,11 +62,11 @@ class MoviesModel {
 
         const new_movie = moviePojo(req);
         if (typeof new_movie == 'undefined')
-            throw new Error('Ups! Error new_movie');
+            throw new Error(messageapp.parameter_not_especified);
 
         const new_actor = actorPojo(req);
         if (typeof new_actor == 'undefined')
-            throw new Error('Ups! Error new_actor');
+            throw new Error(messageapp.parameter_not_especified);
 
         movie.createMovie(new_movie);
         actor.createActors(new_actor);
@@ -76,25 +77,25 @@ class MoviesModel {
 
         const new_movie = moviePojo(req);
         if (typeof new_movie == 'undefined')
-            throw new Error('Ups! Error new_movie');
+            throw new Error(messageapp.parameter_not_especified);
 
         const new_actor = actorPojo(req);
         if (typeof new_actor == 'undefined')
-            throw new Error('Ups! Error new_actor');
+            throw new Error(messageapp.parameter_not_especified);
 
         const _movie = movie.updateMovie(new_movie);
         if (typeof _movie == 'undefined')
-            throw new Error('Ups! Error al actualizar Movie');
+            throw new Error(messageapp.movie_error_update);
 
         const _actor = actor.updateActors(new_actor);
         if (typeof _actor == 'undefined')
-            throw new Error('Ups! Error al actualizar Actor');
+            throw new Error(messageapp.actor_error_update);
 
 
     }
 
     getMoviesFromActor(req) {
-        console.log(`---> moviesModel::getMoviesFromActor = ${req.id}`);
+        console.log(`---> moviesModel::getMoviesFromActor = ${req.value}`);
 
         let _movies = [];
 
